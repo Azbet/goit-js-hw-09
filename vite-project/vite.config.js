@@ -2,6 +2,6 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [],
-  base: '/Azbet/goit-js-hw-09/',
+  base: '/https://azbet.github.io/goit-js-hw-09/',
 })
 
