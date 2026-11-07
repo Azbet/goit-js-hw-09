@@ -1,0 +1,59 @@
+.gallery {
+ display: grid;
+ grid-template-columns: repeat(3, minmax(0, 1fr));
+ gap: 12px;
+ padding: 16px;
+ background-color: #ffffff;
+ max-width: 1150px;
+ margin: 0 auto;
+}
+
+.gallery-item {
+ list-style: none;
+ display: block;
+ border-radius: 4px;
+ overflow: hidden;
+}
+
+.gallery-image {
+ display: block;
+ width: 100%;
+ height: 240px;
+ object-fit: cover;
+ transition: transform 0.3s ease-in-out;
+}
+
+.gallery-image:hover {
+ transform: scale(1.05);
+}
+
+.lightbox-content {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ gap: 12px;
+ width: 100%;
+ height: auto;
+}
+
+.lightbox-image {
+ display: block;
+ object-fit: contain;
+}
+
+.basicLightbox.basicLightbox--visible {
+ background-color: rgba(255, 255, 255, 0.65);
+ backdrop-filter: blur(8px);
+ -webkit-backdrop-filter: blur(8px);
+}
+
+.nav-arrow {
+ padding: 8px 16px;
+ border: 0;
+ border-radius: 4px;
+ background-color: lab(100% 0.01 -0.01 / 0);
+ color: #222222;
+ cursor: pointer;
+ font: inherit;
+ font-size: 2rem;
+}
