@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/goit-js-hw-09/',
+  base: '/azbet.github.io/goit-js-hw-09//',
 })
 
