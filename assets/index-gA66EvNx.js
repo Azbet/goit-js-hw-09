@@ -7,6 +7,11 @@
         alt="${n.description}"
       />
     </a>
-  </li>`,t.appendChild(e)}document.querySelectorAll(`.gallery-link`).forEach(e=>{e.addEventListener(`click`,t=>{t.preventDefault(),basicLightbox.create(`
-      <img src="${e.href}" width="800" height="600">
-    `,{closable:!1,onShow:e=>{let t=n=>{n.key===`Escape`&&(e.close(),document.removeEventListener(`keydown`,t))};document.addEventListener(`keydown`,t)}}).show()})});
+  </li>`,t.appendChild(e)}document.querySelectorAll(`.gallery-link`).forEach((t,n)=>{t.addEventListener(`click`,t=>{t.preventDefault();let r=n;basicLightbox.create(`<div class="lightbox-content">
+      <button class="nav-arrow prev-arrow" id="prevBtn">&#10094;</button>
+      <img class="lightbox-image" 
+      src="${e[r].original}"  width="1100" height="820"
+      alt="${e[r].description}"
+      />
+      <button class="nav-arrow next-arrow" id="nextBtn">&#10095;</button>
+    `,{closable:!1,onShow:t=>{let n=t.element().querySelector(`#prevBtn`),i=t.element().querySelector(`#nextBtn`);n.addEventListener(`click`,()=>{r=(r-1+e.length)%e.length;let n=t.element().querySelector(`.lightbox-image`);n.src=e[r].original,n.alt=e[r].description}),i.addEventListener(`click`,()=>{r=(r+1)%e.length;let n=t.element().querySelector(`.lightbox-image`);n.src=e[r].original,n.alt=e[r].description});let a=e=>{e.key===`Escape`&&(t.close(),document.removeEventListener(`keydown`,a))};document.addEventListener(`keydown`,a)}}).show()})});
